@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        let arr = [1, 2, 3, -1, -2, -3, 0, 0];
+        function plusMinus(arr) {
+
+            var sifirSayac = 0;
+            var pozitifSayac = 0;
+            var negatifSayac = 0;
+
+            arr.map(function (sayi) {
+                if (sayi == 0) {
+                    sifirSayac++;
+                } else if (sayi > 0) {
+                    pozitifSayac++;
+                } else {
+                    negatifSayac++;
+                }
+            });
+
+            var toplam = sifirSayac + negatifSayac + pozitifSayac;
+            console.log(toplam);
+
+            let pozitifOran = (pozitifSayac / toplam).toFixed(6);
+            let sifirOran = (sifirSayac / toplam).toFixed(6);
+            let negatifOran = (negatifSayac / toplam).toFixed(6);
+
+            console.log(pozitifOran);
+            console.log(negatifOran);
+            console.log(sifirOran);
+        }
+
+        plusMinus(arr);
+
+    </script>
+</head>
+
+<body>
+
+   
+
+</body>
+
+</html>
