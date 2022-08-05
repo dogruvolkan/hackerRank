@@ -40,4 +40,40 @@
 ## output
 0.375000 <br />
 0.375000  <br />
-0.250000
+0.250000 <br />
+
+# hackerRank soru 2
+##  dizideki elemanlarının toplamının en küçük değeri ve en büyük değeri
+
+``` javascript
+
+ var arr = [154,2,43,84,25];
+
+        function miniMaxSum(arr) {
+            
+            arr.sort(function(a, b){return a - b});
+            console.log(arr);
+            
+            var maxToplam = 0;
+            for(let i =1 ; i <arr.length ; i++){
+                maxToplam+= arr[i];
+               
+            }
+            console.log(maxToplam);
+
+            var minToplam = 0;
+            for(let i =0 ; i <arr.length-1 ; i++){
+                minToplam+= arr[i];
+               
+            }
+            console.log(minToplam);
+
+        }
+
+        miniMaxSum(arr);
+```
+
+## output
+306 <br />
+154  <br />
+
