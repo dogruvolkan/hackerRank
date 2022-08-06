@@ -77,3 +77,43 @@
 306 <br />
 154  <br />
 
+# hackerRank soru 3
+##  12 lik saat sistemini AM VE PM dikkate edilerek 24 lük saat sistemine (military) çevirme
+
+``` javascript
+
+ let s = "04:59:59PM";
+
+        function timeConversion(s){
+            
+            let diziTamSaat = s.split(":");
+            let saat=Number(diziTamSaat[0]);
+            let dakika=diziTamSaat[1];
+            let saniye=diziTamSaat[2];
+            var amPm = (saniye.toString()).slice(2);
+            saniye=(saniye.toString()).slice(0,2);
+            
+
+            if(saat==12 && amPm=="AM"){
+                saat=0;
+                let militaryFormat=`${"0"+saat.toString()}:${dakika}:${saniye}`;
+                return militaryFormat;
+            }
+            else if(saat<12 && amPm==="PM"){
+                saat = saat + 12 ;
+                let militaryFormat=`${saat.toString()}:${dakika}:${saniye}`;
+                return militaryFormat;
+            }
+            else{
+                if(saat<10){
+                    saat = "0"+saat;
+                }
+                let militaryFormat=`${saat.toString()}:${dakika}:${saniye}`;
+                return militaryFormat;
+            }
+        }
+```
+
+## output 
+16:59:59 <br />
+
