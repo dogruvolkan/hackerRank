@@ -117,3 +117,30 @@
 ## output 
 16:59:59 <br />
 
+# hackerRank soru 4
+##  score göre rekor bulma
+
+``` javascript
+ var scores = [12, 24, 10, 24]
+
+        function breakingRecords(scores) {
+            let min = scores[0],
+                max = scores[0],
+                countMin = 0,
+                countMax = 0;
+            for (const element of scores) {
+                if (element < min) {
+                    min = element;
+                    countMin++;
+                }
+                if (element > max) {
+                    max = element;
+                    countMax++;
+                }
+            }
+            return [countMax, countMin];
+        }
+```
+
+## output 
+1 1 <br />
