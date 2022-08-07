@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var scores = [12, 24, 10, 24]
+
+        function breakingRecords(scores) {
+            let min = scores[0],
+                max = scores[0],
+                countMin = 0,
+                countMax = 0;
+            for (const element of scores) {
+                if (element < min) {
+                    min = element;
+                    countMin++;
+                }
+                if (element > max) {
+                    max = element;
+                    countMax++;
+                }
+            }
+            return [countMax, countMin];
+        }
+
+       console.log(breakingRecords(scores));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
