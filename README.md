@@ -150,7 +150,7 @@
 
 ``` javascript
 
- var n = 5;
+        var n = 5;
         var k = 3;
         var ar = [2, 8, 6 ,8, 4];
 
@@ -170,3 +170,9 @@
         console.log(divisibleSumPairs(n, k, ar));
 
 ```
+
+## output 
+2 4 <br />
+8 4 <br />
+8 4 <br />
+3
