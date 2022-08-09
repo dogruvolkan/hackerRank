@@ -144,3 +144,29 @@
 
 ## output 
 1 1 <br />
+
+# hackerRank soru 6
+## Bir dizide i<j koşuluyla ve verilen k sayısına i ve j inci elemnanın toplamının tam bölünmesini sağlayan ikili sayısı
+
+``` javascript
+
+ var n = 5;
+        var k = 3;
+        var ar = [2, 8, 6 ,8, 4];
+
+        function divisibleSumPairs(n, k, ar) {
+            var sayac = 0;
+            for (var i = 0; i <= n; i++) {
+                for (var j = 0; j <= n; j++) {
+
+                    if ((i < j) && (ar[j] + ar[i]) % k == 0) {
+                        console.log(ar[i], ar[j]);
+                        sayac++;
+                    }
+                }
+            }
+            return sayac;
+        }
+        console.log(divisibleSumPairs(n, k, ar));
+
+```
