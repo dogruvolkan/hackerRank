@@ -175,4 +175,33 @@
 2 4 <br />
 8 4 <br />
 8 4 <br />
-3
+3 <br />
+
+# hackerRank Mock 1
+## ELemanların medyanını hesaplama
+
+``` javascript
+
+       var arr = [0, 1, 2, 3, 4, 5, 6, 7]
+
+        function findMedian(arr) {
+
+            // Write your code here
+            var siralaDizi = arr.sort();
+            var diziUzunluk = siralaDizi.length;
+            if (diziUzunluk % 2 == 1) {
+                let ortaEleman = Math.floor(diziUzunluk / 2);
+                let medyan = siralaDizi[ortaEleman];
+                return medyan;
+            } else {
+                let ortaEleman2 = diziUzunluk / 2;
+                let medyan2 = (siralaDizi[ortaEleman2 - 1] + siralaDizi[ortaEleman2]) / 2
+                return medyan2;
+            }
+        }
+        console.log(findMedian(arr));
+
+```
+
+## output 
+3.5 <br />
