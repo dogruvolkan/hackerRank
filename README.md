@@ -257,3 +257,35 @@
 
 ## output 
 99 <br />
+
+# hackerRank soru 8
+## öğrenci notlarından 38 den küçük olanı yuvarlama , eğer not ile 5'in bir sonraki katı arasındaki fark 3 ten küçükse notları 5'in bir sonraki katına yuvarlama
+
+``` javascript
+
+        var grades = [73, 67, 38, 33,48,34,98];
+        function gradingStudents(grades) {
+            var dizi = [];
+            for (var i = 0; i < grades.length; i++) {
+
+                if (grades[i] < 38) {
+                    dizi.push(grades[i]);
+                } else if ((grades[i] + 1) % 5 ==0) {
+                    dizi.push(grades[i]+1);
+                 
+                } else if ((grades[i] + 2) % 5 == 0) {
+                    dizi.push(grades[i]+2);
+                    
+                } else {
+                    dizi.push(grades[i]);
+                    
+                }         
+            }
+            return dizi;
+        }
+        console.log(gradingStudents(grades));
+
+```
+
+## output 
+ [75, 67, 40, 33, 50, 34, 100] <br />
