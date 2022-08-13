@@ -289,3 +289,48 @@
 
 ## output 
  [75, 67, 40, 33, 50, 34, 100] <br />
+ 
+ # hackerRank soru 9
+## 10 luk tabandaki sayıyı (decimal) 2 lik tabana çevirme daha sonra 0 ları 1 ile , 1 leri 0 ile yer değiştirdikten sonra 2 lik tabandaki sayıyı 10 luk tabana çevirme
+
+``` javascript
+
+        var n = 78;
+        function flippingBits(n) {
+
+            var dizi = [];
+            var sayi = 0;
+            for (;;) {
+
+                var modAl = n % 2;
+                console.log(modAl);
+                if (modAl == 1) {
+                    dizi.unshift(0);
+                } else if (modAl == 0) {
+                    dizi.unshift(1);
+                }
+
+                var diziUzunluk = dizi.length;
+                n = Math.floor(n / 2);
+                if (n < 1)
+                    break;
+            }
+            console.log("uzun", diziUzunluk);
+            for (var i = 0; i <= 32 - (diziUzunluk + 1); i++) {
+                dizi.unshift(1);
+            }
+            
+            for (var i = 0; i < 32; i++) {
+                sayi = sayi + (dizi[i] * Math.pow(2, (31 - i)));             
+            }
+            return sayi;
+            
+         
+       }
+       
+       console.log(flippingBits(n));
+
+```
+
+## output 
+ 4294967217 <br />
