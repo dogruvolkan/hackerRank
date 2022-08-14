@@ -334,3 +334,52 @@
 
 ## output 
  4294967217 <br />
+ 
+  # hackerRank soru 10
+## kare matrisin köşegenler farkının mutlak değerce değerini hesaplama 
+
+``` javascript
+
+         var arr = [
+            [1, 2, 3 ,4],
+            [5, 6, 7 ,8],
+            [9, 7, 2 ,1],
+            [6, 5, 4 ,3],
+        ]
+
+        function diagonalDifference(arr) {
+            var diziUzunluk = arr.length;
+            console.log(diziUzunluk);
+
+            var solKose = 0;
+            var sagKose = 0;
+            var sonuc ;
+
+            for (var i = 0; i <= diziUzunluk; i++) {
+
+                for (var j = 0; j < diziUzunluk; j++) {
+
+                    if (i == j) {
+                        console.log("sol eleman: ",arr[i][j]);
+                        solKose += arr[i][j];
+                        console.log("sol", solKose);
+
+                    }
+                    if ((i + j) == diziUzunluk-1) {
+                        console.log("sağ eleman: ",arr[i][j]);
+                        sagKose += arr[i][j];
+                        console.log("sağ", sagKose);
+                    }
+                }
+                
+            }
+            sonuc = Math.abs(solKose-sagKose);
+            console.log(sonuc);
+
+        }
+        diagonalDifference(arr)
+
+```
+
+## output 
+ 4294967217 <br />
