@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr = [
+            [1, 2, 3 ,4],
+            [5, 6, 7 ,8],
+            [9, 7, 2 ,1],
+            [6, 5, 4 ,3],
+        ]
+
+        function diagonalDifference(arr) {
+            var diziUzunluk = arr.length;
+            console.log(diziUzunluk);
+
+            var solKose = 0;
+            var sagKose = 0;
+            var sonuc ;
+
+            for (var i = 0; i <= diziUzunluk; i++) {
+
+                for (var j = 0; j < diziUzunluk; j++) {
+
+                    if (i == j) {
+                        console.log("sol eleman: ",arr[i][j]);
+                        solKose += arr[i][j];
+                        console.log("sol", solKose);
+
+                    }
+                    if ((i + j) == diziUzunluk-1) {
+                        console.log("sağ eleman: ",arr[i][j]);
+                        sagKose += arr[i][j];
+                        console.log("sağ", sagKose);
+                    }
+                }
+                
+            }
+            sonuc = Math.abs(solKose-sagKose);
+            console.log(sonuc);
+
+        }
+        diagonalDifference(arr)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
