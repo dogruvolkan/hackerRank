@@ -383,3 +383,37 @@
 
 ## output 
 12 <br />
+
+# hackerRank soru 11
+## string ifadenin ingiliz alfabesindeki 26 harfi içermesi durumunda pangram bir tanesini bile içermemesi durumunda not pangram döndürülür
+
+``` javascript
+
+         var s ="We promptly judged antique ivory buckles for the  prize";
+        function pangrams(s) {
+            // Write your code here
+            var kucukHarf = s.toLowerCase();
+            var boslukAl = kucukHarf.replaceAll(" ","");
+            console.log(boslukAl);
+            var dizi = boslukAl.split("");
+            console.log(dizi);
+            var alphabaet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+            
+            var sonuc = alphabaet.every(function(harf){
+                return dizi.includes(harf);
+            })
+            if(sonuc){
+                return "pangram"
+            }
+            else{
+                return "not pangram"
+            }
+            
+
+        }
+        console.log(pangrams(s));
+
+```
+
+## output 
+not pangram <br />
