@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        var s ="We promptly judged antique ivory buckles for the  prize";
+        function pangrams(s) {
+            // Write your code here
+            var kucukHarf = s.toLowerCase();
+            var boslukAl = kucukHarf.replaceAll(" ","");
+            console.log(boslukAl);
+            var dizi = boslukAl.split("");
+            console.log(dizi);
+            var alphabaet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+            
+            var sonuc = alphabaet.every(function(harf){
+                return dizi.includes(harf);
+            })
+            if(sonuc){
+                return "pangram"
+            }
+            else{
+                return "not pangram"
+            }
+            
+
+        }
+        console.log(pangrams(s));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
