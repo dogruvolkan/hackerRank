@@ -417,3 +417,52 @@
 
 ## output 
 not pangram <br />
+
+# hackerRank soru 12
+## string ifadedeyi sıralı her üç harfli keimesinin SOS kelimesine uymaması durumunda uymayan harflerin sayısını bulma
+
+``` javascript
+
+         var s = "SOSSOSSSSOSOIEISOSPOISOSIUSISO";
+        var sayac = 0;
+
+        function marsExploration(s) {
+            var dizi = s.split("");
+            console.log(dizi);
+            var uzunluk = dizi.length;
+            console.log("uzunluk",uzunluk);
+            console.log("kelime", uzunluk / 3);
+
+            for (var i = 0; i <uzunluk/3; i++) {
+                var ilkUc = dizi.slice(0, 3);
+                console.log("giren", i + 1, ilkUc);
+
+                for (var j = 0; j < 1; j++) {
+                    if (ilkUc[j] != "S") {
+                        console.log(ilkUc[j])
+                        sayac++
+                    }
+
+                    if (ilkUc[j + 1] != "O") {
+                        console.log(ilkUc[j + 1])
+                        sayac++
+                    }
+
+                    if (ilkUc[j + 2] != "S") {
+                        console.log(ilkUc[j + 2])
+                        sayac++
+                    }
+
+                }
+                console.log("silinen", dizi.splice(0, 3))
+            }
+
+            return sayac;
+        }
+
+        console.log(marsExploration(s))
+
+```
+
+## output 
+14 <br />
