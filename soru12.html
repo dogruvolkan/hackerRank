@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var s = "SOSSOSSSSOSOIEISOSPOISOSIUSISO";
+        var sayac = 0;
+
+        function marsExploration(s) {
+            var dizi = s.split("");
+            console.log(dizi);
+            var uzunluk = dizi.length;
+            console.log("uzunluk",uzunluk);
+            console.log("kelime", uzunluk / 3);
+
+            for (var i = 0; i <uzunluk/3; i++) {
+                var ilkUc = dizi.slice(0, 3);
+                console.log("giren", i + 1, ilkUc);
+
+                for (var j = 0; j < 1; j++) {
+                    if (ilkUc[j] != "S") {
+                        console.log(ilkUc[j])
+                        sayac++
+                    }
+
+                    if (ilkUc[j + 1] != "O") {
+                        console.log(ilkUc[j + 1])
+                        sayac++
+                    }
+
+                    if (ilkUc[j + 2] != "S") {
+                        console.log(ilkUc[j + 2])
+                        sayac++
+                    }
+
+                }
+                console.log("silinen", dizi.splice(0, 3))
+            }
+
+            return sayac;
+        }
+
+        console.log(marsExploration(s))
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
